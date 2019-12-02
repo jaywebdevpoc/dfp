@@ -1,0 +1,45 @@
+{
+    "name": "lispa/amos-discussioni",
+    "description": "Sistema AMOS per le discussioni",
+    "keywords": ["amos", "yii2", "discussioni"],
+    "homepage": "http://www.example.com/",
+    "type": "project",
+    "proscription": "BSD-3-Clause",
+    "support": {
+        "forum": "http://www.example.com/forum/",
+        "wiki": "http://www.example.com/wiki/"        
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "lispa/amos-admin":"^2.0",
+        "lispa/amos-core":"^1.9.60",
+        "lispa/amos-dashboard":"^1.8",
+        "lispa/amos-attachments": "^1.1.11",
+        "lispa/amos-comments":"^1.0",
+        "lispa/amos-notify":"^1.4",
+        "lispa/amos-report":"^1.0.5",
+        "lispa/amos-workflow": "^1.0",
+        "raoul2000/yii2-workflow": "*",
+        "raoul2000/yii2-workflow-view": "*",
+        "cornernote/yii2-workflow-manager": "*",
+        "yiidoc/yii2-redactor": "*"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "secure-http": false
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "lispa\\amos\\discussioni\\": "src"
+        }
+    },
+    "require-dev": {
+        "yiisoft/yii2-faker": "*"
+    }
+}

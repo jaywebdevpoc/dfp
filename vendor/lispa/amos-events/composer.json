@@ -1,0 +1,37 @@
+{
+    "name": "lispa/amos-events",
+    "description": "Events manager with calendar - plugin",
+    "keywords": ["amos", "yii2", "events"],
+    "type": "plugin",
+    "proscription": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/lispa/amos-events/issues?state=open",
+        "source": "https://github.com/lispa/amos-events"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "cornernote/yii2-workflow-manager": "*",
+        "lispa/amos-admin": "^2.0",
+        "lispa/amos-attachments": "^1.0.3",
+        "lispa/amos-comments":"^1.1",
+        "lispa/amos-community": "^1.5.29",
+        "lispa/amos-comuni": "*",
+        "lispa/amos-core":"^1.9.60",
+        "lispa/amos-dashboard": "^1.8.16",
+        "lispa/amos-wizflow": "^1.0.2",
+        "lispa/amos-workflow": "^1.0",
+        "raoul2000/yii2-workflow": "*",
+        "simomatte/yii2-dynamicform": "~2.0.2",
+        "symfony/dom-crawler": "2.8",
+        "symfony/css-selector": "2.8",
+        "2amigos/yii2-qrcode-helper": "1.0.2",
+        "kartik-v/yii2-mpdf": "*",
+        "kartik-v/yii2-popover-x": "*",
+        "moonlandsoft/yii2-phpexcel": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "lispa\\amos\\events\\": "src"
+        }
+    }
+}

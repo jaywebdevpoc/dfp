@@ -1,0 +1,27 @@
+{
+    "name": "lispa/amos-partnership-profiles",
+    "description": "Partnership profiles - plugin",
+    "keywords": ["amos", "yii2", "partnership_profiles"],
+    "type": "plugin",
+    "proscription": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.4.0",
+        "lispa/amos-admin": "~2.0",
+        "lispa/amos-attachments": "~1.1.11",
+        "lispa/amos-comuni": "~1.2.8",
+        "lispa/amos-community": "~1.5.19",
+        "lispa/amos-dashboard": "~1.8.4",
+        "lispa/amos-core": "~1.9.60"
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "lispa\\amos\\partnershipprofiles\\": "src"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "lispa/amos-notify",
+  "description": "Modulo di gestione notifiche - plugin",
+  "keywords": [
+    "amos",
+    "notifiche",
+    "yii2"
+  ],
+  "homepage": "http://www.lispa.it/",
+  "type": "component",
+  "proscription": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+    "forum": "http://www.yiiframework.com/forum/",
+    "wiki": "http://www.yiiframework.com/wiki/",
+    "irc": "irc://irc.freenode.net/yii",
+    "source": "https://github.com/yiisoft/yii2"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "lispa/amos-admin": "^2.0",
+    "lispa/amos-core": "^1.9.61",
+    "lispa/amos-email-manager": "^1.1",
+    "lispa/amos-workflow": "^1.0"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "secure-http": false
+  },
+  "autoload": {
+    "psr-4": {
+      "lispa\\amos\\notificationmanager\\": "src"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": "php yii migrate --migrationPath=@vendor/lispa/amos-notify/migrations --interactive=0"
+  }
+}

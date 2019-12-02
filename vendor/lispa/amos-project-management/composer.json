@@ -1,0 +1,27 @@
+{
+    "name": "lispa/amos-project-management",
+    "description": "Manage projects",
+    "keywords": ["amos", "yii2", "utility"],
+    "homepage": "http://git.lispa.it/amos/amos-project-management",
+    "type": "component",
+    "require": {
+        "php": ">=5.4.0",
+        "lispa/amos-attachments": "~1.1",
+        "lispa/amos-comments":"~1.1",
+        "lispa/amos-community":"~1.5.25",
+        "lispa/amos-core":"~1.9.50",
+        "lispa/amos-cwh": "~2.1",
+        "lispa/amos-dashboard":"~1.8",
+        "lispa/amos-gantt": "~1.1",
+        "lispa/amos-news":">=1.6",
+        "lispa/amos-wizflow": "~1.0",
+        "lispa/amos-workflow": "~1.0",
+        "kartik-v/yii2-money": "*",
+        "kartik-v/yii2-widget-switchinput": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "lispa\\amos\\projectmanagement\\": "src"
+        }
+    }
+}
