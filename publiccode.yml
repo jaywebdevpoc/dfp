@@ -85,3 +85,5 @@ platforms:
 releaseDate: '2019-10-01'
 softwareType: standalone/web
 url: 'https://github.com/regionelombardia/open20'
+logo: >-
+  https://raw.githubusercontent.com/regionelombardia/open20/master/backend/web/img/logo_open2.png
