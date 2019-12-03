@@ -1,7 +1,7 @@
 # Manuale di Installazione
 
 Open 2.0
-### Scopo
+## Scopo
 La manualistica contenuta è puramente tecnica e per tanto **deve essere letta ed eseguita da personale esperto** onde evitare danni alla macchina che deve ospitare il software
 
 - Si tenga conto della necessità per alcune operazioni di avere **accesso a internet** con la macchina su cui si procederà all’installazione
@@ -9,7 +9,7 @@ La manualistica contenuta è puramente tecnica e per tanto **deve essere letta e
 - **Sulla base della configurazione** della macchina **alcuni percorsi potrebbero non essere corretti** e per tanto vanno verificati accuratamente prima di eseguirli
 - I valori scelti nelle configurazioni di **PHP** sono valori **Raccomandati**, sta alla discrezione del tecnico se sceglierne di differenti
 
-### Prerequisiti
+## Prerequisiti
  - Abilitare la connessione a **internet** per il download dei pacchetti necessari
     - export http_proxy=http://reglomb.proxy:8080
     - export https_proxy=http://reglomb.proxy:8080
@@ -20,7 +20,7 @@ La manualistica contenuta è puramente tecnica e per tanto **deve essere letta e
  - Verificare che la versione di **Apache** Rispetti I requisiti (2.4.29 * nei sistemi operativi RedHat potrebbe essere necessario collegare repository non ufficiali. *)
    - apache2 –v
 
-### Installazione Requisiti
+## Installazione Requisiti
  - **PHP 7.0**
    - yum install rh-php70-php-intl.x86_64
    - yum install rh-php70-php-mbstring.x86_64
@@ -45,7 +45,7 @@ La manualistica contenuta è puramente tecnica e per tanto **deve essere letta e
  - **Estensioni Apache/Lighttpd**
    - rewrite
 
-### Pre-configurazioni Macchina
+## Pre-configurazioni Macchina
 Queste configurazioni devono essere eseguite per ovviare ad alcune mancanze sulla macchina fornitaci in modo da risolvere alcuni problemi che impedirebbero alla piattaforma di funzionare
  - Modifica **.htaccess** in **/opt/rh/httpd24/root/var/www/html/basic-template/backend/web**
    - RewriteEngine on
@@ -66,7 +66,7 @@ Queste configurazioni devono essere eseguite per ovviare ad alcune mancanze sull
     - upload_max_filesize = 300M
     - post_max_size = 300M
     
-### Installazione Piattaforma
+## Installazione Piattaforma
 - **Creare la directory platform nella directory www**
   - cd /opt/rh/httpd24/root/var/www/html/platform
   - cd /opt/rh/httpd24/root/var/www/html/platform
@@ -95,7 +95,7 @@ Queste configurazioni devono essere eseguite per ovviare ad alcune mancanze sull
        ```
    - vi common/config/params-local.php si modificano le email di sistema
    
-### Aggiornamento Piattaforma
+## Aggiornamento Piattaforma
 - **cd /opt/rh/httpd24/root/var/www/html/basic-template**
   - ci si sposta nella directory di installazione
 - **git pull**
