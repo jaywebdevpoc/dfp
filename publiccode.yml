@@ -1,0 +1,87 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+categories:
+  - accounting
+  - blog
+  - business-process-management
+  - cloud-management
+  - collaboration
+  - communications
+  - content-management
+  - crm
+  - customer-service-and-support
+  - document-management
+  - email-marketing
+  - event-management
+  - feedback-and-reviews-management
+  - gamification
+  - learning-management-system
+  - online-community
+  - project-collaboration
+  - project-management
+  - survey
+  - video-conferencing
+description:
+  it:
+    features:
+      - news features
+      - blog
+      - newsletter
+      - chat
+      - surveys
+      - file sharing
+      - events
+      - video conferences
+      - project management
+    genericName: Framework per aree collaborative
+    longDescription: >
+      Open 2.0 è un applicativo open source messo a disposizione da Regione
+      Lombardia per la creazione di strumenti collaborativi. Un set di soluzioni
+      software pronte all'uso e personalizzabili, rivolto a chi ricerca una
+      soluzione per ottimizzare risorse, condividere esperienze e rispondere
+      alle sfide strategiche di crescita e competitività. Open 2.0 è lo
+      strumento ideale per affrontare in maniera efficiente le esigenze
+      organizzative e gestionali della Pubblica Amministrazione e delle
+      organizzazioni complesse.
+
+           
+    shortDescription: >
+      Ambiente per la condivisione di applicazioni rivolte a promuovere la
+      partecipazione e la collaborazione nelle community e nei progetti
+      complessi.
+developmentStatus: stable
+it:
+  conforme:
+    gdpr: false
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: false
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: true
+  riuso:
+    codiceIPA: r_lombar
+landingURL: 'https://github.com/regionelombardia/open20'
+legal:
+  license: GPL-3.0-or-later
+localisation:
+  availableLanguages:
+    - it
+    - en
+  localisationReady: true
+maintenance:
+  contacts:
+    - name: Angelo Cardani
+  type: community
+name: Open 2.0
+platforms:
+  - web
+releaseDate: '2019-10-01'
+softwareType: standalone/web
+url: 'https://github.com/regionelombardia/open20'
