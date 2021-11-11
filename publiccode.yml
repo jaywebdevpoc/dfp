@@ -68,6 +68,9 @@ it:
   riuso:
     codiceIPA: r_lombar
 landingURL: 'https://github.com/RegioneLombardia/Open20'
+usedBy:
+  - Regione Puglia
+  - AnciLab S.r.l.
 legal:
   license: GPL-3.0-or-later
 localisation:
