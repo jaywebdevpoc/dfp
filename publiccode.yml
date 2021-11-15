@@ -73,9 +73,13 @@ it:
     codiceIPA: r_lombar
 landingURL: 'https://github.com/RegioneLombardia/Open20'
 usedBy:
+  - Regione Lombardia
+  - Regione Campania
   - Regione Puglia
+  - AGID - Rete Digitale
   - ART-ER Attrattività Ricerca Territorio
   - AnciLab S.r.l.
+  - Comune di Ferrara
 legal:
   license: GPL-3.0-or-later
 localisation:
