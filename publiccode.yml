@@ -94,7 +94,7 @@ maintenance:
 name: Open 2.0
 platforms:
   - web
-releaseDate: '2019-10-01'
+releaseDate: '2019-11-02'
 softwareType: standalone/web
 url: 'https://github.com/RegioneLombardia/Open20'
 logo: >-
