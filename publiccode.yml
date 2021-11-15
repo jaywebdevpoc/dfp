@@ -58,14 +58,14 @@ description:
 developmentStatus: stable
 it:
   conforme:
-    gdpr: false
-    lineeGuidaDesign: false
-    misureMinimeSicurezza: false
-    modelloInteroperabilita: false
+    gdpr: true
+    lineeGuidaDesign: true
+    misureMinimeSicurezza: true
+    modelloInteroperabilita: true
   countryExtensionVersion: '0.2'
   piattaforme:
     anpr: false
-    cie: false
+    cie: true
     pagopa: false
     spid: true
   riuso:
