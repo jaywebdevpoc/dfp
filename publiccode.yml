@@ -21,12 +21,13 @@ categories:
   - learning-management-system
   - online-community
   - project-collaboration
-  - project-management
   - survey
   - video-conferencing
 description:
   it:
     features:
+      - content management system
+      - community group work
       - news features
       - blog
       - newsletter
@@ -34,8 +35,13 @@ description:
       - surveys
       - file sharing
       - events
+      - podcast
       - video conferences
-      - project management
+      - ticketing system
+      - organizational chart
+      - challange
+      - digital identity
+      - customized notification
     genericName: Framework per aree collaborative
     longDescription: >
       Open 2.0 è un applicativo open source messo a disposizione da Regione
