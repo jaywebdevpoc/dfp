@@ -70,6 +70,7 @@ it:
 landingURL: 'https://github.com/RegioneLombardia/Open20'
 usedBy:
   - Regione Puglia
+  - ART-ER Attrattività Ricerca Territorio
   - AnciLab S.r.l.
 legal:
   license: GPL-3.0-or-later
