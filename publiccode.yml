@@ -3,6 +3,7 @@
 # More info at https://github.com/italia/publiccode.yml
 
 publiccodeYmlVersion: '0.2'
+applicationSuite: OPEN 2.0
 categories:
   - accounting
   - blog
@@ -25,6 +26,8 @@ categories:
   - video-conferencing
 description:
   it:
+    apiDocumentation: 'http://docs.open2.0.appdemoweb.org'
+    documentation: 'https://www.open2.0.regione.lombardia.it'
     features:
       - content management system
       - community group work
@@ -43,21 +46,21 @@ description:
       - digital identity
       - customized notification
     genericName: Framework per aree collaborative
-    longDescription: >
-      *Open 2.0* è un software open source, messo a disposizione 
-      da Regione Lombardia per la creazione di piattaforme complesse e strumenti collaborativi; 
-      lo strumento ideale per affrontare in maniera efficiente le esigenze organizzative 
-      e gestionali della Pubblica Amministrazione e delle organizzazioni complesse.
-      
-      Un set di soluzioni software pronte all'uso e personalizzabili, rivolto a chi ricerca una
-      soluzione per ottimizzare risorse, condividere esperienze e rispondere
-      alle sfide strategiche di crescita e competitività.  
-    shortDescription: >
+    longDescription: |
+      **Open 2.0** è un software open source, messo a disposizione da Regione
+      Lombardia per la creazione di piattaforme complesse e strumenti
+      collaborativi; lo strumento ideale per affrontare in maniera efficiente le
+      esigenze organizzative e gestionali della Pubblica Amministrazione e delle
+      organizzazioni complesse. 
+
+
+      Un set di soluzioni software pronte all'uso e personalizzabili, rivolto a
+      chi ricerca una soluzione per ottimizzare risorse, condividere esperienze
+      e rispondere alle sfide strategiche di crescita e competitività.  
+    shortDescription: |-
       Ambiente per la condivisione di applicazioni rivolte a promuovere la
       partecipazione e la collaborazione nelle community e nei progetti
       complessi
-    documentation: 'https://www.open2.0.regione.lombardia.it’
-    apiDocumentation: 'http://docs.open2.0.appdemoweb.org'
 developmentStatus: stable
 it:
   conforme:
@@ -67,35 +70,37 @@ it:
     modelloInteroperabilita: true
   countryExtensionVersion: '0.2'
   piattaforme:
+    anpr: false
     cie: true
+    pagopa: false
     spid: true
   riuso:
     codiceIPA: r_lombar
 landingURL: 'https://github.com/RegioneLombardia/Open20'
-usedBy:
-  - Regione Lombardia
-  - Regione Campania
-  - Regione Puglia
-  - AGID - Agenzia per l’Italia digitale
-  - ART-ER Attrattività Ricerca Territorio
-  - AnciLab S.r.l.
-  - Comune di Ferrara
 legal:
-  license: GPL-3.0-or-later
+  license: LGPL-3.0-or-later
 localisation:
   availableLanguages:
     - it
     - en
   localisationReady: true
+logo: |-
+  https://raw.githubusercontent.com/RegioneLombardia/Open20/master/backend/web/img/logo_open2.png
 maintenance:
   contacts:
     - name: Angelo Cardani
   type: community
-name: Open 2.0
+name: OPEN 2.0
 platforms:
   - web
-releaseDate: '2019-11-02'
+releaseDate: '2019-11-03'
 softwareType: standalone/web
 url: 'https://github.com/RegioneLombardia/Open20'
-logo: >-
-  https://raw.githubusercontent.com/RegioneLombardia/Open20/master/backend/web/img/logo_open2.png
+usedBy:
+  - Regione Lombardia
+  - Regione Campania
+  - Regione Puglia
+  - AGID - Agenzia per l'Italia digitale
+  - ART-ER Attrattività Ricerca Territorio
+  - AnciLab S.r.l.
+  - Comune di Ferrara
