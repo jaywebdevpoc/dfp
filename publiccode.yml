@@ -85,7 +85,7 @@ localisation:
     - en
   localisationReady: true
 logo: |-
-  https://raw.githubusercontent.com/RegioneLombardia/Open20/master/backend/web/img/logo_open2.png
+  https://raw.githubusercontent.com/RegioneLombardia/Open20/master/backend/web/img/logo_open20.jpg
 maintenance:
   contacts:
     - name: Angelo Cardani
