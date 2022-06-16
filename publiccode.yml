@@ -24,6 +24,7 @@ categories:
   - project-collaboration
   - survey
   - video-conferencing
+  - x
 description:
   it:
     apiDocumentation: 'http://docs.open2.0.appdemoweb.org'
@@ -45,6 +46,7 @@ description:
       - challange
       - digital identity
       - customized notification
+      - x
     genericName: Framework per aree collaborative
     longDescription: |
       **Open 2.0** è un software open source, messo a disposizione da Regione
