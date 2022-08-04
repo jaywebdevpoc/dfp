@@ -565,7 +565,7 @@ class CommunityEventMembersWidget extends Widget
             $itemsMittente['is_group'] = [
                 'value' => function($model) use ($eventInvitationModel) {
                     $invitation = $eventInvitationModel::findOne(['user_id' => $model->user_id, 'event_id' => $this->eventModel->id]);
-                    return $invitation->is_group;
+                    return isset($invitation->is_group) ? $invitation->is_group : [];
                 },
                 'format' => 'boolean',
                 'label' => AmosEvents::t('amosevents', "E' un gruppo")

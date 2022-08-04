@@ -434,8 +434,8 @@ class PubblicazioneController extends CrudController
 
         $pagineQuery         = $this->model->getSondaggiDomandePagines()->orderBy('ordinamento, id ASC');
         $pagine              = $pagineQuery->all();
-        $primaPagina         = $pagine[0]['id'];
-        $ultimaPagina        = $pagine[$pagineQuery->count() - 1]['id'];
+        $primaPagina         = isset($pagine[0]['id']) ? $pagine[0]['id'] : null;
+        $ultimaPagina        = isset($pagine[$pagineQuery->count() - 1]['id']) ? $pagine[$pagineQuery->count() - 1]['id'] : null;
         $prossimaPagina      = null;
         $arrayPag            = [];
         $completato          = false;
@@ -539,6 +539,7 @@ class PubblicazioneController extends CrudController
                 $idSessione            = $sessione->id;
                 $modelloPagina         = $this->percorso_model.$id."\\Pagina_".$primaPagina;
                 $pagina                = new $modelloPagina;
+                
                 return $this->render('/pubblicazione/compila',
                         ['model' => $pagina, 'idSessione' => $idSessione, 'idPagina' => $idPagina, 'utente' => $utente, 'id' => $id,
                         'risposteWithFiles' => $risposteWithFiles]);

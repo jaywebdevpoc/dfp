@@ -40,5 +40,7 @@ return[
     '@vendor/lispa/amos-utility/src/migrations',
     '@vendor/lispa/amos-workflow/src/migrations',
     '@vendor/lispa/amos-videoconference/src/migrations',
+    '@vendor/lispa/amos-faq/src/migrations',
+    '@vendor/lispa/amos-risultati/src/migrations',
     /****************DO NOT REMOVE****************/
 ];

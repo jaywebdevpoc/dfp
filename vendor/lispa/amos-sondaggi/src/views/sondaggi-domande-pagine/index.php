@@ -70,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'version', 
                 [
                     'class' => 'lispa\amos\core\views\grid\ActionColumn',
-                    'template' => '{update} {domande} {aggdomande} {delete}',
+                    'template' => '{update} {domande} {aggdomande} {ans} {delete}',
                     'buttons' => [
                         'update' => function ($url, $model) {
                             /** @var \lispa\amos\sondaggi\models\search\SondaggiDomandePagineSearch $model */
@@ -112,6 +112,23 @@ $this->params['breadcrumbs'][] = $this->title;
                             if (\Yii::$app->getUser()->can('AMMINISTRAZIONE_SONDAGGI') || \Yii::$app->getUser()->can('SONDAGGIDOMANDE_CREATE', ['model' => $model])) {
                                 return Html::a(AmosIcons::show('plus'), Yii::$app->urlManager->createUrl([
                                     '/' . $this->context->module->id . '/sondaggi-domande/create',
+                                    'idSondaggio' => $model->getSondaggi()->one()['id'],
+                                    'idPagina' => $model->id,
+                                    'url' => $url,
+                                ]), [
+                                    'title' => AmosSondaggi::t('amossondaggi', 'Aggiungi domanda'),
+                                    'class' => 'btn btn-tool-secondary'
+                                ]);
+                            } else {
+                                return '';
+                            }
+                        },
+						'ans' => function ($url, $model) {
+                            /** @var \lispa\amos\sondaggi\models\search\SondaggiDomandePagineSearch $model */
+                            $url = \yii\helpers\Url::current();
+                            if (\Yii::$app->getUser()->can('AMMINISTRAZIONE_SONDAGGI') || \Yii::$app->getUser()->can('SONDAGGIDOMANDE_CREATE', ['model' => $model])) {
+                                return Html::a(AmosIcons::show('comment-text'), Yii::$app->urlManager->createUrl([
+                                    '/' . $this->context->module->id . '/sondaggi-risposte/create',
                                     'idSondaggio' => $model->getSondaggi()->one()['id'],
                                     'idPagina' => $model->id,
                                     'url' => $url,

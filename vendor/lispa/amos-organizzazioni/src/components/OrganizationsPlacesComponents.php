@@ -70,10 +70,20 @@ class OrganizationsPlacesComponents
         } else {
             throw new InvalidConfigException("Missing Google PLACE API key");
         }
+        
+        $arrContextOptions= [
+            'ssl' => [
+                //'cafile' => '/path/to/bundle/cacert.pem',
+                'verify_peer'=> true,
+                'verify_peer_name'=> true,
+            ],
+        ];
+
 
         $place_id = urlencode($place_id);
         $UrlGeocoder = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$place_id&key=$googleMapsApiKey";
-        $ResultGeocodingJson = file_get_contents($UrlGeocoder);
+        //$ResultGeocodingJson = file_get_contents($UrlGeocoder, false, stream_context_create($arrContextOptions));
+        $ResultGeocodingJson = self::file_get_contents_ssl($UrlGeocoder);
         $ResultGeocoding = Json::decode($ResultGeocodingJson);
 
         if ($ResultGeocoding && isset($ResultGeocoding['status'])) {
@@ -88,7 +98,20 @@ class OrganizationsPlacesComponents
 
         return false;
     }
-
+    public static function file_get_contents_ssl($url) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_REFERER, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3000); // 3 sec.
+        curl_setopt($ch, CURLOPT_TIMEOUT, 10000); // 10 sec.
+        $result = curl_exec($ch);
+        curl_close($ch);
+        return $result;
+    }
     /**
      * @param string $geocodeString
      * @param bool $trySave
@@ -107,7 +130,8 @@ class OrganizationsPlacesComponents
 
         $GeoCoderParamsString = urlencode($geocodeString);
         $UrlGeocoder = "https://maps.googleapis.com/maps/api/geocode/json?region=it&address=$GeoCoderParamsString&key=$googleMapsApiKey";
-        $ResultGeocodingJson = file_get_contents($UrlGeocoder);
+        //$ResultGeocodingJson = file_get_contents($UrlGeocoder);
+        $ResultGeocodingJson = self::file_get_contents_ssl($UrlGeocoder);
         $ResultGeocoding = Json::decode($ResultGeocodingJson);
         if ($ResultGeocoding && isset($ResultGeocoding['status'])) {
             if ($ResultGeocoding['status'] == 'OK') {

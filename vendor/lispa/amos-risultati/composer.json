@@ -1,0 +1,46 @@
+{
+    "name": "lispa/amos-risultati",
+    "description": "Sistema AMOS per i risultati",
+    "keywords": ["amos", "yii2", "risultati"],
+    "homepage": "http://git.lispa.it/lispa/amos-risultati",
+    "type": "component",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "http://git.lispa.it/lispa/amos-risultati/issues",
+        "forum": "http://www.example.com/forum/",
+        "wiki": "http://git.lispa.it/lispa/amos-risultati/wikis/home",
+        "source": "http://git.lispa.it/lispa/amos-risultati/tree/master"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "lispa/amos-core": "~1.7@dev",
+        "lispa/amos-dashboard":"~1.5@dev",
+        "lispa/amos-admin": "*",
+        "lispa/amos-organizzazioni": "*",
+        "raoul2000/yii2-workflow": "*",
+        "cornernote/yii2-workflow-manager": "*",
+        "yiidoc/yii2-redactor": "*",
+        "kartik-v/yii2-builder": "@dev",
+        "kartik-v/yii2-widget-activeform": "@dev",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "kartik-v/yii2-detail-view": "@dev"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "secure-http": false
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "lispa\\amos\\risultati\\": "src"
+        }
+    },
+    "require-dev": {
+        "yiisoft/yii2-faker": "*"
+    }
+}

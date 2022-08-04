@@ -112,24 +112,7 @@ abstract class CrudController extends BaseController
      */
     public function behaviors()
     {
-        $behaviors = ArrayHelper::merge(parent::behaviors(), [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['request-information'],
-                        'allow' => true,
-                        'roles' => ['@']
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'request-information' => ['post', 'get']
-                ]
-            ]
-        ]);
+        $behaviors = parent::behaviors();
 
         //pr(array_keys($behaviors));die;
 

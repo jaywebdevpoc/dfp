@@ -26,5 +26,6 @@ $this->params['breadcrumbs'][] = AmosDocumenti::t('amosdocumenti', 'Aggiorna');
 <div class="documenti-update">
     <?= $this->render('_form', [
         'model' => $model,
+        'scope' => $scope
     ]) ?>
 </div>

@@ -232,7 +232,7 @@ WorkflowTransitionStateDescriptorWidget::widget([
         <div class="col-md-6">
             <?php
             $moduleTranslation = \Yii::$app->getModule('translation');
-            //$languages         = ['it-IT' => 'IT', 'en-GB' => 'EN'];
+            $languages         = ['it-IT' => 'IT', 'en-GB' => 'EN'];
 
             if (!empty($moduleTranslation)) {
                 $arrLanguage = (new \yii\db\Query())->from('language')->andWhere(['=', 'status', 1])->select(['language_id',

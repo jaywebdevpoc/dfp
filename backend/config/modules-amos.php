@@ -102,6 +102,9 @@ $modules = [
     'workflow' => [
        'class' => 'lispa\amos\workflow\AmosWorkflow',
    ],
+//    'faq' => [
+//         'class' => 'lispa\amos\faq\AmosFaq',
+//     ],
 
 ];
 

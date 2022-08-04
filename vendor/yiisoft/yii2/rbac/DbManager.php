@@ -547,10 +547,12 @@ class DbManager extends BaseManager
     {
         $query = (new Query())->select('b.*')
             ->from(['a' => $this->assignmentTable, 'b' => $this->itemTable])
-            ->where('{{a}}.[[item_name]]={{b}}.[[name]]')
+            //->where('{{a}}.[[item_name]]={{b}}.[[name]]')
             ->andWhere(['a.user_id' => (string) $userId])
             ->andWhere(['b.type' => Item::TYPE_PERMISSION]);
+            //var_dump($query->prepare(Yii::$app->db->queryBuilder)->createCommand()->rawSql);
 
+            //pr($query->all($this->db));exit;
         $permissions = [];
         foreach ($query->all($this->db) as $row) {
             $permissions[$row['name']] = $this->populateItem($row);

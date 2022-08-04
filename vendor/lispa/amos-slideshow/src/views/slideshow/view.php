@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'name',
             'description:ntext',
-            'slideshowRoutes.already_view:statosino',
+            //'slideshowRoutes.already_view:statosino',
             'slideshowRoutes.route',
             'slideshowRoutes.role',
             /*[

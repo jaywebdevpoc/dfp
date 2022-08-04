@@ -345,12 +345,14 @@ $disableStandardWorkflow = $appController->newsModule->disableStandardWorkflow;
                     ['class' => 'col-md-4 col-xs-12']
                 );
                 ?>
-                <?php if ($moduleNotify && !empty($moduleNotify->enableNotificationContentLanguage) && $moduleNotify->enableNotificationContentLanguage) { ?>
+                <?php                 
+                if (false) { ?>
                     <?php
                     $contentLanguage = "<div class=\"col-xs-6 nop\">" . \lispa\amos\notificationmanager\widgets\NotifyContentLanguageWidget::widget(['model' => $model]) . "</div>"
                     ?>
                 <?php } ?>
-
+                <?php                 
+                if (false) { ?>
                 <?=
                 AccordionWidget::widget([
                     'items' => [
@@ -370,7 +372,7 @@ $disableStandardWorkflow = $appController->newsModule->disableStandardWorkflow;
                     ],
                 ]);
                 ?>
-
+                <?php } ?>
                 <?php if (\Yii::$app->getModule('seo')) : ?>
                     <?=
                     AccordionWidget::widget([

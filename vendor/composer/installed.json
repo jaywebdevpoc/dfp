@@ -2476,6 +2476,104 @@
         ]
     },
     {
+        "name": "lispa/amos-faq",
+        "version": "1.2.2",
+        "version_normalized": "1.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "git@bitbucket.org:lispa/amos-faq.git",
+            "reference": "1fd8572869b9cd5ea873db8249405a407213f925"
+        },
+        "require": {
+            "2amigos/yii2-qrcode-helper": "1.0.2",
+            "cornernote/yii2-workflow-manager": "*",
+            "lispa/amos-admin": "^2.0",
+            "lispa/amos-attachments": "^1.0.3",
+            "lispa/amos-comments": "^1.1",
+            "lispa/amos-community": "^1.5.29",
+            "lispa/amos-comuni": "*",
+            "lispa/amos-core": "^1.9.60",
+            "lispa/amos-dashboard": "^1.8.16",
+            "lispa/amos-wizflow": "^1.0.2",
+            "lispa/amos-workflow": "^1.0",
+            "kartik-v/yii2-mpdf": "*",
+            "kartik-v/yii2-popover-x": "*",
+            "moonlandsoft/yii2-phpexcel": "*",
+            "php": ">=5.4.0",
+            "raoul2000/yii2-workflow": "*",
+            "simomatte/yii2-dynamicform": "~2.0.2",
+            "symfony/css-selector": "2.8",
+            "symfony/dom-crawler": "2.8"
+        },
+        "time": "2019-11-29T10:13:03+00:00",
+        "type": "plugin",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "lispa\\amos\\faq\\": "src"
+            }
+        },
+        "notification-url": "https://packages.lispa.appdemoweb.org/downloads/",
+        "proscription": [
+            "BSD-3-Clause"
+        ],
+        "description": "FAQ - plugin",
+        "keywords": [
+            "amos",
+            "faq",
+            "yii2"
+        ]
+    },
+    {
+        "name": "lispa/amos-risultati",
+        "version": "1.2.2",
+        "version_normalized": "1.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "git@bitbucket.org:lispa/amos-risultati.git",
+            "reference": "1fd8572869b9cd5ea873db8249405a407213f925"
+        },
+        "require": {
+            "2amigos/yii2-qrcode-helper": "1.0.2",
+            "cornernote/yii2-workflow-manager": "*",
+            "lispa/amos-admin": "^2.0",
+            "lispa/amos-attachments": "^1.0.3",
+            "lispa/amos-comments": "^1.1",
+            "lispa/amos-community": "^1.5.29",
+            "lispa/amos-comuni": "*",
+            "lispa/amos-core": "^1.9.60",
+            "lispa/amos-dashboard": "^1.8.16",
+            "lispa/amos-wizflow": "^1.0.2",
+            "lispa/amos-workflow": "^1.0",
+            "kartik-v/yii2-mpdf": "*",
+            "kartik-v/yii2-popover-x": "*",
+            "moonlandsoft/yii2-phpexcel": "*",
+            "php": ">=5.4.0",
+            "raoul2000/yii2-workflow": "*",
+            "simomatte/yii2-dynamicform": "~2.0.2",
+            "symfony/css-selector": "2.8",
+            "symfony/dom-crawler": "2.8"
+        },
+        "time": "2019-11-29T10:13:03+00:00",
+        "type": "plugin",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "lispa\\amos\\risultati\\": "src"
+            }
+        },
+        "notification-url": "https://packages.lispa.appdemoweb.org/downloads/",
+        "proscription": [
+            "BSD-3-Clause"
+        ],
+        "description": "Results Plugin",
+        "keywords": [
+            "amos",
+            "risultati",
+            "yii2"
+        ]
+    },
+    {
         "name": "lispa/amos-gantt",
         "version": "1.1.5",
         "version_normalized": "1.1.5.0",

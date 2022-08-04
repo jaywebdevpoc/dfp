@@ -1,0 +1,109 @@
+Installation step (followed in local)
+
+- Required php v 7.0x
+- Required apache2 v 2.0.x
+- Required mysql 5.x
+- Required composer (version 2.0.13), php and git in your system PATH veriable (PC setting/environment variable)
+- Make folder(regioneLombardia or whatever you would like the project directory name to be , we will refere to it as {project_dir}) in your localhost root directory
+- Clone souce code using below url
+https://github.com/RegioneLombardia/Open20
+- Open cmd and cd to regioneLombardia folder
+- Run php init command and make rquired files at path (there are 8 folders (console/web  backend/runtime backend/web/assets common/uploads common/uploads/store common/uploads/temp frontend/runtime frontend/web/assets) that will be shown when you run this command , make those folders and give them write permission ) from output of command (correct composer.json and whole project is provide in zip format in mail)
+- Create db dfp (make sure the charset should be utf8 and collation should be utf8_unicode_ci and default_storage_engine should be 'InnoDB')
+- Go to {project_dir}\common\config\main-local.php and add db detail like below
+'db' => [ 
+	'class' => 'yii\db\Connection',
+	'dsn' => 'mysql:host=localhost;dbname=dfp',
+	'username' => 'root',
+	'password' => '',
+	'charset' => 'utf8',
+	'enableSchemaCache' => true,
+	'schemaCacheDuration' => 88000,
+	'schemaCache' => 'schemaCache',
+	'attributes'=>[
+		PDO::ATTR_PERSISTENT => true
+	]
+],
+- Run command composer update and read the output, replace all not found version with latest version shown in command output in file {project_dir}\composer.json and run command again
+- Run php yii migrate if warning or error shown run again until all migration done
+- Run yii serve --docroot="path to {project_dir}/backend/web folder"
+- Took localhost url from command output and append /backend/web and run that url on browser
+
+
+
+Installation step (followed in server)
+
+	Check ubuntu version
+	    lsb_release -a (my version 22.04)
+	Install apache
+	    sudo apt update
+	    sudo apt install apache2
+
+	Install php
+	    sudo apt-add-repository ppa:ondrej/php
+	    sudo apt-get update
+	    sudo apt-get install php7.0
+	    sudo apt-get install php7.0-cli
+	    sudo apt-get install php7.0-mbstring
+	    sudo apt-get install php7.0-bcmath
+	    sudo apt-get install php7.0-xml
+	    sudo apt-get install php7.0-intl
+	    sudo apt-get install php7.0-mysql
+	    sudo apt-get install php7.0-gd
+	    sudo apt-get install php7.0-zip
+	    sudo apt-get install php7.0-mysqlnd
+	    sudo apt-get install php7.0-curl
+
+	Clone the project in /var/www/html
+	    sudo git clone https://github.com/RegioneLombardia/Open20
+
+	Install composer 
+	    v 2.0.13 (this version is very important)
+
+	Inside Project Direcotry Run
+	    sudo php init
+	    sudo php composer.phar update or install (type yes if asked to upgrade the dependencies)
+
+	Change root of our server 
+	    sudo nano /etc/apache2/apache2.conf
+
+	    Add below line
+	    DocumentRoot "/var/www/html/{your project /backend/web}"
+
+	    Change below
+
+	    <Directory /var/www/html/{your project /backend/web}>
+	        Options Indexes FollowSymLinks
+	        AllowOverride All
+	        Require all granted
+	    </Directory>
+
+	Enable rewrite module
+	    sudo a2enmod rewrite
+
+	Give write permission to following directory
+	    sudo chmod -R a+rw frontend/web/assets
+	    backend/runtime
+	    backend/web/assets                                                                                         
+	    common/uploads                                                                                             
+	    common/uploads/store                                                                                       
+	    common/uploads/temp                                                                                        
+	    frontend/runtime                                                                                           
+	    frontend/web/assets
+	    backend/web/invitations
+
+Installation step (if you have zip)
+	
+	-- Unzip and point your server to {project directory}/backend/web
+	-- Other things will remain same as above
+
+
+
+
+
+	-----------------------------
+
+	composer require lispa/amos-faz
+
+
+	

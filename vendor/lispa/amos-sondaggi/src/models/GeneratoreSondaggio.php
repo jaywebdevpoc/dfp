@@ -138,12 +138,14 @@ class GeneratoreSondaggio extends \yii\base\Model
                 $rules[] = "[['domanda_".$Domanda['id']."'], 'required']";
             } else if ($Domanda['obbligatoria'] && $Domanda['domanda_condizionata']) {
                 $condizione           = SondaggiDomandeCondizionate::findOne(['sondaggi_domande_id' => $Domanda['id']]);
-                $rispostaCondizione   = SondaggiRispostePredefinite::findOne(['id' => $condizione->sondaggi_risposte_predefinite_id]);
-                $idRispostaCondizione = $rispostaCondizione->id;
-                $domandaCondizionata  = $rispostaCondizione->sondaggi_domande_id;
+                $rispostaCondizione   = SondaggiRispostePredefinite::findOne(['id' => isset($condizione->sondaggi_risposte_predefinite_id) ? $condizione->sondaggi_risposte_predefinite_id : null]);
+                $idRispostaCondizione = isset($rispostaCondizione->id) ? $rispostaCondizione->id : null;
+                $domandaCondizionata  = isset($rispostaCondizione->sondaggi_domande_id) ? $rispostaCondizione->sondaggi_domande_id : null;
                 $DomandaCond          = SondaggiDomande::findOne(['id' => $domandaCondizionata]);
-                $tipoCondizionata     = SondaggiDomandeTipologie::findOne(['id' => $DomandaCond->sondaggi_domande_tipologie_id])->html_type;
-                if ($pagina->id == $Domanda['sondaggi_domande_pagine_id']) {
+                if(isset($DomandaCond->sondaggi_domande_tipologie_id)){
+                    $tipoCondizionata     = SondaggiDomandeTipologie::findOne(['id' => $DomandaCond->sondaggi_domande_tipologie_id])->html_type;
+                }                
+                if ($pagina->id == $Domanda['sondaggi_domande_pagine_id'] && isset($DomandaCond->sondaggi_domande_tipologie_id)) {
                     switch ($tipoCondizionata) {
                         case 'checkbox':
                             $rules[] = "['domanda_".$Domanda['id']."', 'required', 'when' => function(\$model) {\n"
@@ -215,9 +217,9 @@ class GeneratoreSondaggio extends \yii\base\Model
                     }
                 } else {
                     $sessione     = SondaggiRisposteSessioni::findOne(['sondaggi_id' => $Domanda['sondaggi_id'], 'user_id' => $userProfile]);
-                    $risposteDate = SondaggiRisposte::findOne(['sondaggi_risposte_sessioni_id' => $sessione->id, 'sondaggi_domande_id' => $condizione->sondaggi_domande_id,
+                    $risposteDate = SondaggiRisposte::findOne(['sondaggi_risposte_sessioni_id' => $sessione->id, 'sondaggi_domande_id' => isset($condizione->sondaggi_domande_id) ? $condizione->sondaggi_domande_id : null,
                             'sondaggi_risposte_predefinite_id' => $idRispostaCondizione]);
-                    if (count($risposteDate) == 1) {
+                    if (isset($risposteDate) && count($risposteDate) == 1) {
                         $rules[] = "[['domanda_".$Domanda['id']."'], 'required']";
                     }
                 }
@@ -489,8 +491,9 @@ class GeneratoreSondaggio extends \yii\base\Model
         $idPaginaCondizioneLibera   = $rispostaCondizioneLibera->sondaggi_domande_pagine_id;
         $idDomandaCondizioneLibera  = $rispostaCondizioneLibera->id;
         $tipoCondizioneLibera       = SondaggiDomandeTipologie::findOne($rispostaCondizioneLibera->sondaggi_domande_tipologie_id)->html_type;       
-        }
         $rispostaCondizione   = SondaggiRispostePredefinite::findOne(['id' => $condizione->sondaggi_risposte_predefinite_id]);
+        }
+        
         if(!empty($rispostaCondizione)){
         $idRispostaCondizione = $rispostaCondizione->id;
         $idPaginaCondizione   = $rispostaCondizione->getSondaggiDomande()->one()['sondaggi_domande_pagine_id'];

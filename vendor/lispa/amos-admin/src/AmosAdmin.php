@@ -258,7 +258,7 @@ class AmosAdmin extends AmosModule implements SearchModuleInterface
     /**
      * @var bool $showFacilitatorForModuleSelect Display a select multiple field for assigning specific module facilitator permissions in the user profile form
      */
-    public $showFacilitatorForModuleSelect = false;
+    public $showFacilitatorForModuleSelect = true;
 
     /**
      * @var bool $dontCheckOneTagPresent If true the model validation doesn't check if there's at least one tag present for non ADMIN users.

@@ -77,6 +77,6 @@ class WidgetIconPartnershipProfilesDashboard extends WidgetIcon
         $widgetAll = new WidgetIconPartnershipProfilesAll();
         $widgetCreatedBy = new WidgetIconPartnershipProfilesCreatedBy();
 
-        return $widgetAll->getBulletCount() + $widgetCreatedBy->getBulletCount();
+        return (int) $widgetAll->getBulletCount() + (int) $widgetCreatedBy->getBulletCount();
     }
 }

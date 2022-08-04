@@ -1,0 +1,36 @@
+Open 20 :-
+
+Project Understanding and flow :-
+
+-- Looks like project is a CMS build for managing Larger Organizations
+-- Initially with default user , data for various moules can be set up 
+-- Following Modules are include 
+	-- Users 
+	-- Community
+	-- Discussions
+	-- News 
+	-- Organization
+	-- Video Conference
+	-- Events
+	-- Administration Invitations
+	-- Management
+	-- Partnership Profiles
+	-- Surveys
+	-- Email
+	-- Express Interest
+	-- Partner Profile 
+	-- Tag
+	-- Utility
+
+
+-- Default user will have to facilitator first 
+-- For that create user -> save user -> edit user -> enable it as facilitator from 	settings tab at bottom
+-- Other users can be created and this facilitator can be assigned to it
+-- After that a user can be validated
+-- After that a user can be invited to join the system by sending them access details 
+-- there they will set password and can access system 
+-- User can be given access to various modules from my profile
+-- These modules they will see on dashboard
+
+
+So far this is the basic understanding of the flow, let me konw if you want me to dig deeper into each module

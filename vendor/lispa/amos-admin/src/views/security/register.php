@@ -108,7 +108,9 @@ $communityId = Yii::$app->request->get('community');
                 <div class="col-sm-6 col-xs-12"><?= $form->field($model, 'cognome')->textInput() ?></div>
                 <div class="col-xs-12"><?= $form->field($model, 'email')->textInput() ?></div>
                 <?= Html::tag('div', AmosAdmin::t('amosadmin', '#required_field'), ['class' => 'col-xs-12 required-field']) ?>
+                <?php /* ?>
                 <div class="col-xs-12"><?= $form->field($model, 'reCaptcha')->widget(\himiklab\yii2\recaptcha\ReCaptcha::className())->label('') ?></div>
+                <?php */ ?>
                 <div class="col-xs-12 text-bottom">
                     <?= Html::a(AmosAdmin::t('amosadmin', '#cookie_policy_message'), '/site/privacy', ['title' => AmosAdmin::t('amosadmin', '#cookie_policy_title'), 'target' => '_blank']) ?>
                     <?= Html::tag('p', AmosAdmin::t('amosadmin', '#cookie_policy_content')) ?>

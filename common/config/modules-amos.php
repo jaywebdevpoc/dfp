@@ -110,4 +110,8 @@ $modules['tag'] = [
     'class' => 'lispa\amos\tag\AmosTag',
 ];
 
+$modules['faq'] = [
+    'class' => 'lispa\amos\faq\AmosFaq',
+];
+
 return $modules;

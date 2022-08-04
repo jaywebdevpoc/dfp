@@ -77,6 +77,6 @@ class WidgetIconExpressionsOfInterestDashboard extends WidgetIcon
         $widgetReceived = new WidgetIconExpressionsOfInterestReceived();
         $widgetCreatedBy = new WidgetIconExpressionsOfInterestCreatedBy();
 
-        return $widgetReceived->getBulletCount() + $widgetCreatedBy->getBulletCount();
+        return (int) $widgetReceived->getBulletCount() + (int) $widgetCreatedBy->getBulletCount();
     }
 }

@@ -78,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </dl>
                         <dl>
                             <dt><?= $model->getAttributeLabel('message'); ?></dt>
-                            <dd class="mail_message_info"><p><?= $model->message; ?></p></dd>
+                            <dd class=""><p><?= $model->message; ?></p></dd>
                         </dl>
                         <dl>
                             <dt><?= $model->getAttributeLabel('sent date'); ?></dt>

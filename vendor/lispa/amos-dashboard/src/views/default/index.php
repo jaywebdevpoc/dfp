@@ -1,7 +1,9 @@
 <?php
+
 /** @var \lispa\amos\dashboard\models\AmosUserDashboards $currentDashboard * */
 
 /** @var \yii\web\View $this * */
+
 use lispa\amos\core\icons\AmosIcons;
 use lispa\amos\dashboard\AmosDashboard;
 use lispa\amos\dashboard\assets\ModuleDashboardAsset;
@@ -17,24 +19,24 @@ $layoutModuleSet = isset($moduleL);
 $this->title = $this->context->module->name;
 ?>
 
-<input type="hidden" id="saveDashboardUrl" value="<?= Yii::$app->urlManager->createUrl(['dashboard/manager/save-dashboard-order']); ?>"/>
-<input type="hidden" id="currentDashboardId" value="<?= $currentDashboard['id'] ?>"/>
+<input type="hidden" id="saveDashboardUrl" value="<?= Yii::$app->urlManager->createUrl(['dashboard/manager/save-dashboard-order']); ?>" />
+<input type="hidden" id="currentDashboardId" value="<?= $currentDashboard['id'] ?>" />
 
 <div id="dashboard-edit-toolbar" class="hidden pull-right">
-<?=
+  <?=
   Html::a(AmosDashboard::tHtml('amosdashboard', 'Salva'), 'javascript:void(0);', [
     'id' => 'dashboard-save-button',
     'class' => 'btn btn-success bk-saveOrder',
     'title' => AmosDashboard::t('amosdashboard', 'Salva ordinamento dashboard')
   ]);
-?>
+  ?>
 
-<?=
+  <?=
   Html::a(AmosDashboard::tHtml('amosdashboard', 'Annulla'), \yii\helpers\Url::current(), [
     'class' => 'btn btn-danger bk-saveDelete',
     'title' => AmosDashboard::t('amosdashboard', 'Annulla ordinamento dashboard')
   ]);
-?>
+  ?>
 </div>
 <?php
 /*
@@ -48,7 +50,7 @@ $this->title = $this->context->module->name;
   <div class="actions-dashboard-container clearfixplus">
     <?php Pjax::begin(['id' => 'widget-icons-pjax-block']); ?>
     <div id="widgets-icon" class="bk-sortableIcon plugin-list" role="menu">
-    <?php
+      <?php
       //indice di questa dashboard
       $thisDashboardIndex = 'dashboard_' . $currentDashboard->slide;
 
@@ -63,7 +65,16 @@ $this->title = $this->context->module->name;
       } else {
         AmosDashboard::tHtml('amosdashboard', 'Non ci sono widgets selezionati per questa dashboard');
       }
-    ?>
+      ?>
+      <div class="item-widget col-custom" data-code="lispa\amos\documenti\widgets\icons\WidgetIconDocumentiDashboard">
+        <a data-module="documenti-dashboard" class="" href="/documenti" title="Documents module" role="menuitem" data-pjax="0">
+          <span class="badge"></span>
+          <span class="color-primary bk-backgroundIcon">
+            <span class="dash dash-file-text-o"> </span>
+            <span class="icon-dashboard-name pluginName">
+              <span class="language-item" data-category="amosdocumenti" data-hash="18ecdbc042daba7987fbbd6a58f034cc" data-language_id="en-GB" data-params="[]">Documents</span></span></span>
+        </a>
+      </div>
     </div>
     <?php Pjax::end() ?>
   </div>
@@ -82,10 +93,8 @@ $this->title = $this->context->module->name;
           foreach ($thisDashboardWidgets as $widget) {
             $widgetObj = Yii::createObject($widget['classname']);
         ?>
-          <div <?= (($layoutModuleSet) ? '' : 'class="grid-item' . ' ' . $widgetObj->classFullSize . '"') ?>
-            data-code="<?= $widgetObj::classname() ?>"
-            data-module-name="<?= $widgetObj->moduleName ?>"><?= $widgetObj::widget(); ?></div>
-          <?php
+            <div <?= (($layoutModuleSet) ? '' : 'class="grid-item' . ' ' . $widgetObj->classFullSize . '"') ?> data-code="<?= $widgetObj::classname() ?>" data-module-name="<?= $widgetObj->moduleName ?>"><?= $widgetObj::widget(); ?></div>
+        <?php
           }
         }
         ?>

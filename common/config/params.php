@@ -12,8 +12,8 @@
 //$googleMapsApiKey = '';
 
 return [
-    'adminEmail' => 'help@example.com',
-    'supportEmail' => 'help@example.com',
+    'adminEmail' => 'webdevelopmentpoc@gmail.com',
+    'supportEmail' => 'webdevelopmentpoc@gmail.com',
     'user.passwordResetTokenExpire' => 86400,
     'loginTimeout' => 3600 * 3, //3 Hours
 
@@ -24,10 +24,10 @@ return [
 //    ],
 //    'googleMapsApiKey'=> $googleMapsApiKey,
 
-//    'platform' => [
-//        'backendUrl' => '//test.example.it',         //TODO REPLACE YOUR URL
-//        'frontendUrl' => '//test.example.it',       //TODO REPLACE YOUR URL
-//    ],
+   'platform' => [
+       'backendUrl' => 'http://127.0.0.0',         //TODO REPLACE YOUR URL
+       'frontendUrl' => 'http://127.0.0.0',       //TODO REPLACE YOUR URL
+   ],
 
     'logoMail' => '/img/amos-logo.png',
     'logo' => '/img/amos-logo.png',

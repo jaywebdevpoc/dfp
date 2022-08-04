@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 //['class' => 'yii\grid\SerialColumn'],
                 //'id',                               
                 'domanda:ntext',
-                'domanda_condizionata:statosino',
+                //'domanda_condizionata:statosino',
                 [
                     'attribute' => 'sondaggi_domande_pagine_id',
                     'value' => function ($model) {

@@ -297,6 +297,7 @@ $moduleNotify = \Yii::$app->getModule('notify');
             ];
         }
         $workflowInitialStatusId = $model->getWorkflowSource()->getWorkflow(DiscussioniTopic::DISCUSSIONI_WORKFLOW)->getInitialStatusId();
+        $initialStatusName = explode('/', $workflowInitialStatusId);
         echo WorkflowTransitionButtonsWidget::widget([
             // parametri ereditati da verioni precedenti del widget WorkflowTransition
             'form' => $form,
@@ -309,7 +310,7 @@ $moduleNotify = \Yii::$app->getModule('notify');
             ),
             // fisso lo stato iniziale per generazione pulsanti e comportamenti
             // "fake" in fase di creazione (il record non e' ancora inserito nel db)
-            'initialStatusName' => end(explode('/', $workflowInitialStatusId)),
+            'initialStatusName' => end($initialStatusName),
             'initialStatus' => $workflowInitialStatusId,
 
             // Stati da renderizzare obbligatoriamente in fase di creazione (quando il record non e' ancora inserito nel db)

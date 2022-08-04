@@ -400,12 +400,16 @@ echo WorkflowTransitionStateDescriptorWidget::widget([
                 }
             }
             ?>
+            <?php                 
+                if (false) { ?>
             <?php if ($moduleNotify && !empty($moduleNotify->enableNotificationContentLanguage) && $moduleNotify->enableNotificationContentLanguage) { ?>
                 <?php
                 $contentLanguage = "<div class=\"col-xs-6 nop\">" . \lispa\amos\notificationmanager\widgets\NotifyContentLanguageWidget::widget(['model' => $model]) . "</div>"
                 ?>
             <?php } ?>
-
+            <?php } ?>
+                <?php                 
+                if (false) { ?>
             <?= AccordionWidget::widget([
                 'items' => [
                     [
@@ -424,7 +428,7 @@ echo WorkflowTransitionStateDescriptorWidget::widget([
                 ],
             ]);
             ?>
-
+            <?php } ?>
             <?php
             $moduleSeo = \Yii::$app->getModule('seo');
             if (isset($moduleSeo)) : ?>

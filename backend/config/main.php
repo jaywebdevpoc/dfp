@@ -89,5 +89,10 @@ return [
     'components' => $components,
     'modules' => $modules,
     'params' => $params,
+    'aliases' => [
+        '@file' => dirname(__DIR__),
+        '@bower' => '@vendor/bower-asset',
+        '@npm' => '@vendor/npm-asset',
+    ],
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ];
