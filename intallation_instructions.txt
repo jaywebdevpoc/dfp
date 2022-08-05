@@ -24,6 +24,8 @@ https://github.com/RegioneLombardia/Open20
 		PDO::ATTR_PERSISTENT => true
 	]
 ],
+- Go to {project_dir}\backend\config\params-local.php and add your google map key insted of 'set_your_api_key'
+- Go to {project_dir}\common\config\params-local.php and add support email and backendUrl and frontendUrl
 - Run command composer update and read the output, replace all not found version with latest version shown in command output in file {project_dir}\composer.json and run command again
 - Run php yii migrate if warning or error shown run again until all migration done
 - Run yii serve --docroot="path to {project_dir}/backend/web folder"
