@@ -49,5 +49,5 @@ backend/web/assets
 console/runtime
 
 # config folder ignore
-backend/config
-common/config
+#backend/config
+#common/config
