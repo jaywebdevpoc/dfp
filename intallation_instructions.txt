@@ -4,10 +4,10 @@ Installation step (followed in local)
 - Required apache2 v 2.0.x
 - Required mysql 5.x
 - Required composer (version 2.0.13), php and git in your system PATH veriable (PC setting/environment variable)
-- Make folder(regioneLombardia or whatever you would like the project directory name to be , we will refere to it as {project_dir}) in your localhost root directory
+- Make folder(dfp or whatever you would like the project directory name to be , we will refere to it as {project_dir}) in your localhost root directory
 - Clone souce code using below url
 https://github.com/RegioneLombardia/Open20
-- Open cmd and cd to regioneLombardia folder
+- Open cmd and cd to dfp folder
 - Run php init command and make rquired files at path (there are 8 folders (console/web  backend/runtime backend/web/assets common/uploads common/uploads/store common/uploads/temp frontend/runtime frontend/web/assets) that will be shown when you run this command , make those folders and give them write permission ) from output of command (correct composer.json and whole project is provide in zip format in mail)
 - Create db dfp (make sure the charset should be utf8 and collation should be utf8_unicode_ci and default_storage_engine should be 'InnoDB')
 - Go to {project_dir}\common\config\main-local.php and add db detail like below
@@ -96,14 +96,6 @@ Installation step (if you have zip)
 	
 	-- Unzip and point your server to {project directory}/backend/web
 	-- Other things will remain same as above
-
-
-
-
-
-	-----------------------------
-
-	composer require lispa/amos-faz
-
-
-	
+	--  Run this command in Database
+	set global sql_mode=' ';
+	SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
