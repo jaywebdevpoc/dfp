@@ -77,6 +77,12 @@ class AmosDocumenti extends AmosModule implements ModuleInterface, SearchModuleI
      */
     public $whiteListFilesExtensions = 'csv, doc, docx, pdf, rtf, txt, xls, xlsx';
 
+
+    /**
+     * @var string List of the allowed extensions for the upload of files.
+     */
+    public $whiteListFilesExtensionsImage = 'jpeg, jpg, png, gif';
+
     /**
      * @var bool|false $hidePubblicationDate
      */

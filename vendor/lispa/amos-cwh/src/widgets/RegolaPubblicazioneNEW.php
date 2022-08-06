@@ -198,11 +198,13 @@ JS
 
             $destinatariFromScope = false;
             if (!$this->getModel()->isNewRecord) {
-                foreach ($this->getModel()->destinatari as $cwhNodiId) {
-                    $cwhNodo = CwhNodi::findOne(['id' => $cwhNodiId, 'cwh_config_id' => 3]);
-                    if (!is_null($cwhNodo)) {
-                        $destinatariFromScope = true;
-                        break;
+                if(is_array($this->getModel()->destinatari)){
+                    foreach ($this->getModel()->destinatari as $cwhNodiId) {
+                        $cwhNodo = CwhNodi::findOne(['id' => $cwhNodiId, 'cwh_config_id' => 3]);
+                        if (!is_null($cwhNodo)) {
+                            $destinatariFromScope = true;
+                            break;
+                        }
                     }
                 }
             }

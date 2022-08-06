@@ -129,7 +129,7 @@ class Documenti extends \lispa\amos\documenti\models\base\Documenti implements C
     private $documentMainFile;
 
     /**
-     * @var File[] $documentAttachments
+     * @var $attachments
      */
     private $documentAttachments;
 
@@ -186,14 +186,7 @@ class Documenti extends \lispa\amos\documenti\models\base\Documenti implements C
                 'message' => AmosDocumenti::t('amosdocumenti', '#main_document_required')
             ],
 
-            [['documentAttachments'], 
-                'file', 
-                'extensions' => (!empty($this->documentsModule)) 
-                    ? $this->documentsModule->whiteListFilesExtensions 
-                    : '', 
-                'checkExtensionByMimeType' => false, 
-                'maxFiles' => 0
-            ],
+            [['documentAttachments'], 'file'],            
 
             [['documentMainFile'], 
                 'file', 

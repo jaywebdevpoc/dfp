@@ -349,13 +349,16 @@ class DestinatariNEW extends Widget
 
 	if (!$this->getModel()->isNewRecord) {
             $destinatariDataTmp = [];
-            foreach ($this->getModel()->destinatari as $cwhNodiId) {
-                $cwhNodo = CwhNodi::findOne(['id' => $cwhNodiId, 'cwh_config_id' => 3]);
-                if (!is_null($cwhNodo)) {
-                    $destinatariDataTmp[$cwhNodiId] = $cwhNodo->text;
-					$destinatariHidden .= Html::hiddenInput($this->getNameField().'[destinatari][]', $cwhNodiId);
+            
+            if(is_array($this->getModel()->destinatari)){
+                foreach ($this->getModel()->destinatari as $cwhNodiId) {
+                    $cwhNodo = CwhNodi::findOne(['id' => $cwhNodiId, 'cwh_config_id' => 3]);
+                    if (!is_null($cwhNodo)) {
+                        $destinatariDataTmp[$cwhNodiId] = $cwhNodo->text;
+                        $destinatariHidden .= Html::hiddenInput($this->getNameField().'[destinatari][]', $cwhNodiId);
+                    }
                 }
-            }
+            }            
  
             if (!empty($destinatariDataTmp)) {
                 $destinatariData = $destinatariDataTmp;
